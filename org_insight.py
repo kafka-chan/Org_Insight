@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title = "Customer Intelligance Dashboard", page_icon = ":bar_chart:", layout = "wide")
 @st.cache_data
 def load_data():
-    df = pd.read_excel("ML_testing.xlsx")
+    df = pd.read_excel("ML_Testing.xlsx")
     df["Day_name"] = df["Date"].dt.day_name()
     df["Month"] = df["Date"].dt.month_name()
     return df
